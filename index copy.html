@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <title>TfkNewTech PS4 Host</title>
+    <title>WebKitty</title>
     <meta name="description" content="WebKitty is a user-friendly, feature-rich PS4 exploit host for 6.70 - 13.00." />
     <meta name="author" content="ArabPixel">
     <meta name="keywords"
@@ -13,7 +13,7 @@
 
     <!-- Facebook / Discord / WhatsApp -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="TfkNewTech PS4 Host">
+    <meta property="og:title" content="WebKitty">
     <meta property="og:description"
         content="WebKitty is a user-friendly, feature-rich PS4 exploit host for 6.70 - 13.52.">
     <meta property="og:image" content="http://webkitty.arabpixel.net/includes/assets/icons/webkitty.svg">
@@ -21,7 +21,7 @@
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="TfkNewTech PS4 Host">
+    <meta name="twitter:title" content="WebKitty">
     <meta name="twitter:description"
         content="WebKitty is a user-friendly, feature-rich PS4 exploit host for 6.70 - 13.52.">
     <meta name="twitter:image" content="http://webkitty.arabpixel.net/includes/assets/icons/webkitty.svg">
@@ -50,8 +50,6 @@
 </head>
 
 <body class="bg-gray-900 text-white">
-    <a href="https://wa.me/213676828269" style="position:fixed;right:12px;top:12px;z-index:99999;background:#111827;color:white;border:1px solid #3b82f6;border-radius:10px;padding:8px 12px;text-decoration:none;font-family:Arial,sans-serif;font-size:14px"><b>TfkNewTech</b> · WhatsApp 0676828269</a>
-
     <main class="mainContainer">
         <section id="initial-screen" class="relative flex flex-col items-center justify-center min-h-screen p-6 transition-opacity duration-700
             opacity-100">
@@ -97,6 +95,26 @@
                     Update Cache
                 </button>
             </header>
+
+            <!-- Cache Update Notification Banner -->
+            <div id="cacheUpdateBanner"
+                style="display:none;position:fixed;top:0;left:0;right:0;z-index:9999;padding:10px 18px;background:linear-gradient(90deg,#1a1f2e,#22304a);border-bottom:1px solid rgba(59,130,246,0.35);box-shadow:0 2px 16px rgba(0,0,0,0.45);display:flex;align-items:center;gap:12px;font-family:inherit;font-size:14px;color:#e2e8f0;transform:translateY(-100%);transition:transform 0.35s cubic-bezier(.4,0,.2,1);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0">
+                    <polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/>
+                    <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+                </svg>
+                <span id="cacheUpdateMsg" style="flex:1">Cache update applied. Reload for the latest version.</span>
+                <button id="cacheUpdateReload"
+                    style="padding:5px 14px;border-radius:8px;background:#3b82f6;color:#fff;border:none;cursor:pointer;font-size:13px;font-weight:600;letter-spacing:0.02em;transition:background 0.2s;"
+                    onmouseover="this.style.background='#2563eb'" onmouseout="this.style.background='#3b82f6'">
+                    Reload
+                </button>
+                <button id="cacheUpdateDismiss"
+                    style="padding:5px 10px;border-radius:8px;background:rgba(255,255,255,0.07);color:#94a3b8;border:none;cursor:pointer;font-size:13px;transition:background 0.2s;"
+                    onmouseover="this.style.background='rgba(255,255,255,0.13)'" onmouseout="this.style.background='rgba(255,255,255,0.07)'">
+                    ✕
+                </button>
+            </div>
 
             <!-- PS Button -->
             <button id="pslogo">
@@ -734,6 +752,9 @@
     <script src="./includes/js/events.js"></script>
     <script src="./includes/js/payloadsHandler.js"></script>
     <script src="./includes/js/utilities.js"></script>
+
+    <!-- Silent cache update check iframe (populated by cache.js after load) -->
+    <!-- <iframe id="silentCacheFrame" src="about:blank" style="display:none;width:0;height:0;border:0;" aria-hidden="true"></iframe> -->
 </body>
 
 </html>
