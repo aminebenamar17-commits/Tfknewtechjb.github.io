@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <title>Tfk NewTech</title>
+    <title>TfkNewTech PS4 Host</title>
     <meta name="description" content="TfkNewTech is a user-friendly, feature-rich PS4 exploit host for 6.70 - 13.00." />
     <meta name="author" content="ArabPixel">
     <meta name="keywords"
@@ -26,37 +26,33 @@
         content="TfkNewTech is a user-friendly, feature-rich PS4 exploit host for 6.70 - 13.52.">
     <meta name="twitter:image" content="https://tfknewtech15.github.io/logo.png">
     <link rel="icon" href="includes/assets/icons/favicon.ico" type="image/x-icon">
-    
-    
-    
+    <link rel="stylesheet" id="main-stylesheet" href="">
+    <link rel="stylesheet" id="color-stylesheet" href="">
+    <script>
+        // Immediately redirect PS4 from HTTPS to HTTP before loading DOM or scripts
+        if (window.location.protocol === 'https:' &&
+            window.location.hostname === 'tfknewtech.arabpixel.net' &&
+            navigator.userAgent.indexOf('PlayStation 4') !== -1) {
+            window.abortLoading = true;
+            window.location.replace(window.location.href.replace(/^https:/, 'http:'));
+        }
 
+        // Prevent "Theme Flash" by applying the href before the body renders
+        var savedTheme = localStorage.getItem('theme') || "index";
+        var savedColor = localStorage.getItem('color') || "default";
+        if (savedTheme) {
+            document.getElementById('main-stylesheet').setAttribute('href', './includes/css/layouts/' + savedTheme + '.css');
+        }
+        if (savedColor) {
+            document.getElementById('color-stylesheet').setAttribute('href', './includes/css/colors/' + savedColor + '.css');
+        }
+    </script>
+</head>
 
+<body class="bg-gray-900 text-white">
+    <a href="https://wa.me/213676828269" style="position:fixed;right:12px;top:12px;z-index:99999;background:#111827;color:white;border:1px solid #3b82f6;border-radius:10px;padding:8px 12px;text-decoration:none;font-family:Arial,sans-serif;font-size:14px"><b>TfkNewTech</b> · WhatsApp 0676828269</a>
 
-
-
-<style id="tfk-clean-home">
-#tfkHome,#tfkHome *{box-sizing:border-box}html,body{margin:0;background:#01050c}#tfkHome{position:relative;z-index:99999;min-height:100vh;background:radial-gradient(circle at 78% 40%,#063f85 0,#031a3c 24%,#020916 57%,#01050c 100%);color:#fff;font-family:Arial,Helvetica,sans-serif;padding:18px 355px 92px 258px;overflow:hidden}
-#tfkHome:after{content:"△  ○  ×  □";position:absolute;right:18px;top:290px;color:#0877dc33;font-size:70px;line-height:1.8;width:300px;z-index:-1}
-#tfkHome .logo{position:absolute;left:55px;top:18px;width:165px;height:165px;border-radius:50%;object-fit:contain;filter:drop-shadow(0 0 14px #079cff)}
-#tfkHome header{text-align:center;min-height:195px;border-bottom:1px solid #0b6dac;padding-top:5px}#tfkHome h1{font-family:Arial Black,Arial,sans-serif;font-size:68px;line-height:1;margin:0;font-style:italic;font-weight:900;letter-spacing:-3px;text-shadow:0 0 16px #087eff}#tfkHome h1 span{color:#12bdf8}#tfkHome header b{display:block;font-size:25px;letter-spacing:9px;margin-top:9px}#tfkHome header p{color:#35c8ff;letter-spacing:5px;font-weight:800;font-size:14px}
-#tfkHome nav{position:absolute;left:14px;top:220px;width:220px;background:#06101e;border:1px solid #075c9c;border-radius:13px;overflow:hidden;box-shadow:0 0 18px #0066aa33}#tfkHome nav div{padding:16px 22px;border-bottom:1px solid #10263b;font-weight:800;font-size:17px;cursor:pointer}#tfkHome nav div:hover,#tfkHome nav div:first-child{background:linear-gradient(90deg,#087bed,#159cff)}
-#tfkHome .wa{position:absolute;right:24px;top:20px;width:305px;border:3px solid #20e15d;border-radius:25px;background:#071e12;padding:13px;text-align:center;box-shadow:0 0 26px #20e15d99}#tfkHome .wa strong{font-size:30px}#tfkHome .wa a{display:block;background:#25d366;color:#04140b;border-radius:25px;padding:9px;margin:8px 0;text-decoration:none;font-size:23px;font-weight:900}
-#tfkHome .section{margin:18px 0;border:1px solid #0876c2;border-radius:14px;background:linear-gradient(145deg,#06152aee,#030b17ee);padding:14px;box-shadow:0 0 18px #0077cc22}#tfkHome .section h2{font-size:21px;margin:0 0 13px}
-#tfkHome .ex{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}#tfkHome .box{border:1px solid #1597f7;border-radius:12px;text-align:center;padding:10px 7px;background:linear-gradient(#071a38,#06101e);box-shadow:0 0 12px #008eff33}#tfkHome .ex .box{min-height:198px}#tfkHome .box small,#tfkHome .box b{display:block}#tfkHome .box small{font-size:15px;font-weight:800}#tfkHome .box b{font-size:17px;margin:8px 0}#tfkHome .ico{height:65px;display:flex;align-items:center;justify-content:center;font-size:48px;font-weight:900;color:#16c7ff;text-shadow:0 0 16px currentColor;margin:7px 0}#tfkHome .purple{color:#b640ff}#tfkHome .pink{color:#ff3d9f}#tfkHome .green{color:#24e85d}#tfkHome .red{color:#ff3030}#tfkHome .gold{color:#ffd329}
-#tfkHome .launch{border:1px solid #43c8ff;color:#fff;width:100%;cursor:pointer;background:linear-gradient(#159fff,#0578e8);border-radius:9px;padding:9px 3px;font-family:Arial Black,Arial,sans-serif;font-size:13px;font-weight:900;box-shadow:0 0 13px #087de0}#tfkHome .launch:hover{filter:brightness(1.25);transform:translateY(-1px)}
-#tfkHome .pay{display:grid;grid-template-columns:repeat(8,1fr);gap:7px}#tfkHome .pay .box{min-height:142px}#tfkHome .pay .ico{font-size:34px;height:45px;margin:2px}#tfkHome .pay .box b{font-size:11px;min-height:27px}
-#tfkHome .art{position:absolute;right:18px;top:310px;width:310px;text-align:center;color:#c7eaff}#tfkHome .art .pad{font-size:105px;filter:drop-shadow(0 0 15px #087cff)}#tfkHome .art strong{font-family:cursive;font-size:42px;font-style:italic;line-height:1.05;display:block;color:#57cfff}#tfkHome .art strong span{color:#ffd12f}#tfkHome .art p{font-weight:800}
-#tfkHome .fw{position:absolute;left:18px;right:18px;bottom:14px;border:1px solid #0876c2;border-radius:11px;padding:10px 14px;background:#040d1bee;font-size:12px}#tfkHome .fw b{font-size:15px;margin-right:10px}#tfkHome .fw span{display:inline-block;border:1px solid #14d66a;border-radius:5px;padding:5px 7px;margin:2px;font-weight:800}
-body.tfk-home-mode>.mainContainer{display:none!important}
-@media(max-width:1200px){#tfkHome{padding-right:25px}.tfkHome .wa{}#tfkHome .wa,#tfkHome .art{display:none}#tfkHome .ex{grid-template-columns:repeat(3,1fr)}#tfkHome .pay{grid-template-columns:repeat(4,1fr)}}@media(max-width:760px){#tfkHome{padding-left:15px;padding-top:185px}#tfkHome .logo{left:18px;width:130px;height:130px}#tfkHome header{position:absolute;top:30px;left:160px;right:10px}#tfkHome h1{font-size:34px}#tfkHome header b{font-size:14px;letter-spacing:4px}#tfkHome header p{font-size:9px;letter-spacing:2px}#tfkHome nav{display:none}#tfkHome .ex{grid-template-columns:repeat(2,1fr)}#tfkHome .pay{grid-template-columns:repeat(2,1fr)}#tfkHome .fw{position:relative;left:auto;right:auto;bottom:auto;margin-top:15px}}
-</style></head>
-
-<body class="bg-gray-900 text-white"><section id="tfkHome"><img class="logo" src="./tfk-logo.svg?v=5" alt="Tfk NewTech"><header><h1>Tfk <span>NewTech</span> 🎮</h1><b>PS4 EXPLOIT HOST</b><p>JAILBREAK • PAYLOADS • OUTILS • TOUT EN UN SEUL SITE</p></header><nav><div>⌂ &nbsp; Accueil</div><div>〈/〉 &nbsp; Exploits</div><div>◆ &nbsp; Payloads</div><div>🛠 &nbsp; Outils</div><div>🎮 &nbsp; Jeux PS4</div><div>⟳ &nbsp; Mises à jour</div><div>❔ &nbsp; Aide</div><div>◉ &nbsp; Contact</div></nav><aside class="wa"><strong>◉ WhatsApp</strong><div>Assistance & Service</div><a href="https://wa.me/213676828269">0676828269</a><small>✓ Réparation &nbsp; ✓ Jeux PS4<br>✓ Conseil &nbsp; ✓ Assistance</small></aside><div class="section"><h2>ϟ &nbsp; EXPLOITS PS4</h2><div class="ex"><div class="box"><small>6.70–6.72</small><b>Bad Hoist</b><div class="ico ">ϟ</div><button class="launch tfk-select" type="button">LANCER</button></div><div class="box"><small>7.00–9.60</small><b>PSFree</b><div class="ico purple">◉</div><button class="launch tfk-select" type="button">LANCER</button></div><div class="box"><small>7.00–11.02</small><b>CSSFontFace</b><div class="ico pink">□△○</div><button class="launch tfk-select" type="button">LANCER</button></div><div class="box"><small>11.00–12.02</small><b>SlopKit</b><div class="ico ">⬡</div><button class="launch tfk-select" type="button">LANCER</button></div><div class="box"><small>12.50–13.00</small><b>Netctrl</b><div class="ico ">◎</div><button class="launch tfk-select" type="button">LANCER</button></div><div class="box"><small>13.02–13.52</small><b>Relapse</b><div class="ico ">⟳</div><button class="launch tfk-select" type="button">LANCER</button></div></div></div><div class="section"><h2>◆ &nbsp; PAYLOADS</h2><div class="pay"><div class="box"><div class="ico gold">★</div><b>GOLD HEN</b><button class="launch tfk-select" type="button">LANCER</button></div><div class="box"><div class="ico ">▣</div><b>FTP</b><button class="launch tfk-select" type="button">LANCER</button></div><div class="box"><div class="ico ">▦</div><b>Bin Loader</b><button class="launch tfk-select" type="button">LANCER</button></div><div class="box"><div class="ico ">◆</div><b>App2USB</b><button class="launch tfk-select" type="button">LANCER</button></div><div class="box"><div class="ico red">⊘</div><b>Disable Updates</b><button class="launch tfk-select" type="button">LANCER</button></div><div class="box"><div class="ico green">⟳</div><b>Enable Updates</b><button class="launch tfk-select" type="button">LANCER</button></div><div class="box"><div class="ico ">▤</div><b>Kernel Dumper</b><button class="launch tfk-select" type="button">LANCER</button></div><div class="box"><div class="ico ">◎</div><b>WebRTE</b><button class="launch tfk-select" type="button">LANCER</button></div></div></div><aside class="art"><div class="pad">🎮</div><strong>Play<br><span>Repair</span><br>Upgrade</strong><p>♕ Tfk NewTech<br>Gaming & Réparation</p></aside><div class="fw"><b>⚙ FIRMWARES COMPATIBLES</b><span>6.70</span><span>6.72</span><span>7.00</span><span>7.50</span><span>7.55</span><span>8.00</span><span>8.52</span><span>9.00</span><span>9.03</span><span>9.04</span><span>9.50</span><span>9.60</span><span>10.00</span><span>10.01</span><span>11.00</span><span>11.02</span><span>12.00</span><span>12.02</span><span>12.50</span><span>13.00</span><span>13.02</span><span>13.52</span></div></section>
-
-
-    
-
-    <main class="mainContainer" id="originalHost">
+    <main class="mainContainer">
         <section id="initial-screen" class="relative flex flex-col items-center justify-center min-h-screen p-6 transition-opacity duration-700
             opacity-100">
             <!-- Header Buttons -->
@@ -738,30 +734,6 @@ body.tfk-home-mode>.mainContainer{display:none!important}
     <script src="./includes/js/events.js"></script>
     <script src="./includes/js/payloadsHandler.js"></script>
     <script src="./includes/js/utilities.js"></script>
-<script>
-(function(){
-function openHost(){var h=document.getElementById('tfkHome');if(h)h.style.display='none';document.body.classList.remove('tfk-home-mode');window.scrollTo(0,0);}
-var bs=document.querySelectorAll('.tfk-open-host');for(var i=0;i<bs.length;i++)bs[i].onclick=openHost;
-var nav=document.querySelectorAll('#tfkHome nav div');
-if(nav[0])nav[0].onclick=function(){window.scrollTo(0,0)};
-if(nav[1])nav[1].onclick=function(){document.querySelector('#tfkHome .section').scrollIntoView()};
-if(nav[2])nav[2].onclick=function(){document.querySelectorAll('#tfkHome .section')[1].scrollIntoView()};
-if(nav[7])nav[7].onclick=function(){window.location.href='https://wa.me/213676828269'};
-})();
-</script><script>
-document.body.className='tfk-home-mode';
-var host=document.getElementById('originalHost'); if(host)host.style.display='none';
-var buttons=document.querySelectorAll('.tfk-select');
-for(var i=0;i<buttons.length;i++){buttons[i].onclick=function(){
- var all=document.querySelectorAll('#tfkHome .box');for(var j=0;j<all.length;j++)all[j].style.boxShadow='0 0 12px #008eff33';
- this.parentNode.style.boxShadow='0 0 24px #08a9ff';
- var old=this.innerHTML;this.innerHTML='SÉLECTIONNÉ';var self=this;setTimeout(function(){self.innerHTML=old},1200);
-};}
-var nav=document.querySelectorAll('#tfkHome nav div');
-if(nav[0])nav[0].onclick=function(){window.scrollTo(0,0)};
-if(nav[1])nav[1].onclick=function(){document.querySelector('#tfkHome .section').scrollIntoView()};
-if(nav[2])nav[2].onclick=function(){document.querySelectorAll('#tfkHome .section')[1].scrollIntoView()};
-if(nav[7])nav[7].onclick=function(){window.location.href='https://wa.me/213676828269'};
-</script></body>
+</body>
 
 </html>
