@@ -47,21 +47,22 @@
             document.getElementById('color-stylesheet').setAttribute('href', './includes/css/colors/' + savedColor + '.css');
         }
     </script>
-<style id="tfk-loader-style">
-#tfk-loader{display:none;position:fixed;inset:0;z-index:99999;background:rgba(1,5,15,.94);align-items:center;justify-content:center;flex-direction:column}
-#tfk-loader.show{display:flex}
-.tfk-loader-logo{font:900 7vw Arial Black,Arial;color:#e9f7ff;text-shadow:0 0 8px #fff,0 0 20px #168cff,0 0 50px #0077ff;letter-spacing:-.04em;animation:tfkPulse 1.15s ease-in-out infinite alternate}
-.tfk-loader-logo b{color:#27a8ff}.tfk-loader-ring{width:82px;height:82px;border:5px solid rgba(60,170,255,.18);border-top-color:#39b7ff;border-radius:50%;margin:28px 0 18px;animation:tfkSpin .85s linear infinite}
-.tfk-loader-text{font:700 18px Arial;color:#bde8ff;letter-spacing:.08em;text-shadow:0 0 12px #168cff}
-@keyframes tfkSpin{to{transform:rotate(360deg)}}@keyframes tfkPulse{from{transform:scale(.96);opacity:.75}to{transform:scale(1.04);opacity:1}}
-</style><style id="tfk-header-brand">
+<style id="tfk-header-brand">
 #tfk-header-brand{position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:2;pointer-events:none;text-align:center;opacity:.32}
 #tfk-header-brand .tfk-title{font:900 38px/1 Arial Black,Arial;color:#dff6ff;letter-spacing:-2px;text-shadow:0 0 7px #fff,0 0 15px #159cff,0 0 34px #0078ff}
 #tfk-header-brand .tfk-title b{color:#25adff}
 #tfk-header-brand .tfk-sub{margin-top:4px;font:700 10px Arial;letter-spacing:5px;color:#9cddff;text-shadow:0 0 9px #078cff}
+</style><style id="tfk-loader-style">
+#tfk-loader{display:none;position:fixed;inset:0;z-index:99999;background:linear-gradient(145deg,#030712,#07152b 55%,#02050d);align-items:center;justify-content:center;flex-direction:column}
+#tfk-loader.show{display:flex}
+.tfk-mark{font:900 64px/1 Arial Black,Arial;color:#f4fbff;letter-spacing:-4px;text-shadow:0 0 12px rgba(255,255,255,.6),0 0 30px #168cff}
+.tfk-mark span{color:#29aaff}.tfk-line{width:280px;height:3px;margin-top:26px;background:rgba(255,255,255,.12);overflow:hidden;border-radius:3px}
+.tfk-line i{display:block;width:35%;height:100%;background:#35b7ff;box-shadow:0 0 16px #168cff;animation:tfkLoad 1.1s ease-in-out infinite}
+.tfk-status{margin-top:16px;font:600 13px Arial;color:#b9ddf5;letter-spacing:3px}
+@keyframes tfkLoad{0%{transform:translateX(-110%)}100%{transform:translateX(300%)}}
 </style></head>
 
-<body class="bg-gray-900 text-white"><div id="tfk-header-brand"><div class="tfk-title">TFK <b>NewTech</b></div><div class="tfk-sub">GAMING • PS4 HOST</div></div><div id="tfk-loader"><div class="tfk-loader-logo">TFK <b>NewTech</b></div><div class="tfk-loader-ring"></div><div class="tfk-loader-text">LOADING EXPLOIT...</div></div>
+<body class="bg-gray-900 text-white"><div id="tfk-loader"><div class="tfk-mark">TFK <span>NewTech</span></div><div class="tfk-line"><i></i></div><div class="tfk-status">INITIALIZING EXPLOIT</div></div><div id="tfk-header-brand"><div class="tfk-title">TFK <b>NewTech</b></div><div class="tfk-sub">GAMING • PS4 HOST</div></div>
     
 
     <main class="mainContainer">
@@ -747,12 +748,7 @@
     <script src="./includes/js/payloadsHandler.js"></script>
     <script src="./includes/js/utilities.js"></script>
 <script id="tfk-loader-script">
-(function(){
-function showTfkLoader(){var l=document.getElementById('tfk-loader');if(l)l.classList.add('show');setTimeout(function(){if(l)l.classList.remove('show')},12000)}
-document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('#pslogo,#exploitRun');if(b)showTfkLoader()},true);
-var obs=new MutationObserver(function(){var l=document.getElementById('tfk-loader');if(!l)return;var s=document.getElementById('state');if(s&&/success|failed|ready|complete|error/i.test(s.textContent||''))l.classList.remove('show')});
-obs.observe(document.documentElement,{subtree:true,childList:true,characterData:true});
-})();
+(function(){document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('#pslogo,#exploitRun');if(!b)return;var l=document.getElementById('tfk-loader');if(l){l.classList.add('show');setTimeout(function(){l.classList.remove('show')},3500)}},true)})();
 </script></body>
 
 </html>
